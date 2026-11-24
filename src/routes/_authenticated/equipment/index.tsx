@@ -11,7 +11,7 @@ import { formatNumber } from "@/lib/format";
 import { getFleetAnalysis, STATUS_ORDER, type Status } from "@/lib/ml/analysis";
 import { STATUS_META } from "@/lib/status-meta";
 
-export const Route = createFileRoute("/equipment/")({
+export const Route = createFileRoute("/_authenticated/equipment/")({
   head: () => ({
     meta: [
       { title: "Equipment Fleet — PulseGuard" },

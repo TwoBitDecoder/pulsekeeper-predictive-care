@@ -11,7 +11,7 @@ import { FEATURES, type FeatureVector } from "@/lib/ml/features";
 import { chartAxisProps, chartTooltipStyle, STATUS_META } from "@/lib/status-meta";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/model")({
+export const Route = createFileRoute("/_authenticated/model")({
   head: () => ({
     meta: [
       { title: "AI Model & Risk Simulator — PulseGuard" },

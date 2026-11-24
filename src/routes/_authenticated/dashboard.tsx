@@ -11,7 +11,7 @@ import { getFleetAnalysis, statusFromRisk, STATUS_ORDER } from "@/lib/ml/analysi
 import { WARDS } from "@/lib/ml/fleet";
 import { chartAxisProps, chartTooltipStyle, SEVERITY_META, STATUS_META } from "@/lib/status-meta";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
     meta: [
       { title: "Fleet Overview — PulseGuard Predictive Maintenance" },

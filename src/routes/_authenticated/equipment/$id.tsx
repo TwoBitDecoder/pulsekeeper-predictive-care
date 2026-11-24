@@ -10,7 +10,7 @@ import { getDevice, LIMITS } from "@/lib/ml/analysis";
 import { chartAxisProps, chartTooltipStyle, STATUS_META } from "@/lib/status-meta";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/equipment/$id")({
+export const Route = createFileRoute("/_authenticated/equipment/$id")({
   loader: ({ params }) => {
     const d = getDevice(params.id);
     if (!d) throw notFound();

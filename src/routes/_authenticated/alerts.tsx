@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "pulseguard:acknowledged-alerts";
 
-export const Route = createFileRoute("/alerts")({
+export const Route = createFileRoute("/_authenticated/alerts")({
   head: () => ({
     meta: [
       { title: "Maintenance Alerts — PulseGuard" },
