@@ -111,7 +111,9 @@ export function rocCurve(yTrue: number[], probs: number[]) {
   for (let t = 1; t >= -0.0001; t -= 0.02) {
     let tp = 0, fp = 0;
     probs.forEach((p, i) => {
-      if (p >= t) yTrue[i] === 1 ? tp++ : fp++;
+      if (p < t) return;
+      if (yTrue[i] === 1) tp++;
+      else fp++;
     });
     points.push({ fpr: fp / neg, tpr: tp / pos });
   }
