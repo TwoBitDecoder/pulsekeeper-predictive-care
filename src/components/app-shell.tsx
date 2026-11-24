@@ -5,7 +5,7 @@ import { AS_OF_ISO, formatDate } from "@/lib/format";
 import { getFleetAnalysis } from "@/lib/ml/analysis";
 
 const NAV = [
-  { to: "/", label: "Overview", icon: LayoutDashboard },
+  { to: "/dashboard", label: "Overview", icon: LayoutDashboard },
   { to: "/equipment", label: "Equipment", icon: MonitorCog },
   { to: "/alerts", label: "Alerts", icon: BellRing },
   { to: "/model", label: "AI model", icon: BrainCircuit },
@@ -37,7 +37,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <Link
               key={to}
               to={to}
-              activeOptions={{ exact: to === "/" }}
+              activeOptions={{ exact: to === "/dashboard" }}
               className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-sidebar-foreground/75 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
               activeProps={{ className: "bg-sidebar-accent text-sidebar-accent-foreground" }}
             >
@@ -75,7 +75,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <Link
               key={to}
               to={to}
-              activeOptions={{ exact: to === "/" }}
+              activeOptions={{ exact: to === "/dashboard" }}
               className="flex shrink-0 items-center gap-2 rounded-md px-3 py-1.5 text-xs text-muted-foreground"
               activeProps={{ className: "bg-accent text-accent-foreground" }}
             >
